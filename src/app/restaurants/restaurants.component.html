@@ -1,3 +1,19 @@
-<p>
-  restaurants works!
-</p>
+ <!-- INíCIO do CONTEÚDO -->
+ <section class="content-header">
+  <h1>
+    Todos os Restaurantes
+  </h1>
+</section>
+
+
+<section class="content">
+
+  <div class="row">
+          <div class="col-sm-6 col-xs-12" *ngFor="let i of restaurant" >
+          <mt-restaurant [restaurant]="i"></mt-restaurant>
+
+        </div>
+</div>
+</section>
+
+<!-- FIM  do CONTEÚDO -->

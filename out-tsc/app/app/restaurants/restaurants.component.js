@@ -8,10 +8,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
+import { RestaurantsService } from './restaurants.service';
 var RestaurantsComponent = (function () {
-    function RestaurantsComponent() {
+    function RestaurantsComponent(restaurantService) {
+        this.restaurantService = restaurantService;
     }
     RestaurantsComponent.prototype.ngOnInit = function () {
+        this.restaurant = this.restaurantService.restaurants();
     };
     return RestaurantsComponent;
 }());
@@ -21,7 +24,7 @@ RestaurantsComponent = __decorate([
         templateUrl: './restaurants.component.html',
         styleUrls: ['./restaurants.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [RestaurantsService])
 ], RestaurantsComponent);
 export { RestaurantsComponent };
 //# sourceMappingURL=restaurants.component.js.map

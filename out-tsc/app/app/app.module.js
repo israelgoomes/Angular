@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ROUTES } from './app.route';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { RestaurantsService } from './restaurants/restaurants.service';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,14 +28,15 @@ AppModule = __decorate([
             HeaderComponent,
             HomeComponent,
             AboutComponent,
-            RestaurantsComponent
+            RestaurantsComponent,
+            RestaurantComponent
         ],
         imports: [
             BrowserModule,
             HttpModule,
             RouterModule.forRoot(ROUTES)
         ],
-        providers: [],
+        providers: [RestaurantsService],
         bootstrap: [AppComponent]
     })
 ], AppModule);
